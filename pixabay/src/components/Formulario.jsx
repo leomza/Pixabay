@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Error from './Error'
 
-const Formulario = ({ guardarBusqueda }) => {
+const Formulario = ({ guardarBusqueda, guardarPaginaActual }) => {
   //Inicializo la variable en la cual se recibira lo que el usuario escriba en el buscador
   const [termino, guardarTermino] = useState('')
 
@@ -10,6 +10,9 @@ const Formulario = ({ guardarBusqueda }) => {
 
   const buscarImagenes = e => {
     e.preventDefault()
+
+    //Por las dudas primero seteo que la pagina este en "1":
+    guardarPaginaActual(1)
 
     //Primero validare que el buscador NO este vacio
     if (termino.trim() === '') {

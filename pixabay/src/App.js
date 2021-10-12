@@ -62,7 +62,7 @@ function App() {
     <div className="container">
       <div className="jumbotron">
         <p className="lead text-center"> Buscador de Imagenes</p>
-        <Formulario guardarBusqueda={guardarBusqueda} />
+        <Formulario guardarBusqueda={guardarBusqueda} guardarPaginaActual={guardarPaginaActual}/>
       </div>
       <div className="row justify-content-center">
         <ListadoImagenes imagenes={imagenes} />
